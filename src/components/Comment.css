@@ -1,0 +1,36 @@
+.CommentBlock {
+  margin: 15px 5px;
+}
+
+.CommentTopBar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.CommentTitle {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.CommentUser {
+  color: dodgerblue;
+}
+
+.CommentAdded {
+  margin: 0 6px;
+}
+
+.CommentDate {
+  font-size: 14px;
+}
+
+.CommentText {
+  font-size: 20px;
+  margin: 0 0 0 4px;
+}
+
+.CommentHighlight {
+  color: #e4df11;
+}
