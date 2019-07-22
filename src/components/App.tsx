@@ -15,14 +15,14 @@ const initialState = {
   comments: [],
   selectedUserId: -1,
   search: '',
-  status: 'SYNC'
+  isSynced: false
 } as AppState;
 
 const App: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    if (state.status === 'IDLE') return;
+    if (state.isSynced) return;
     (async () => {
       const selectedComments = state.comments.filter(
         comment => comment.isSelected
@@ -48,15 +48,15 @@ const App: React.FC = () => {
         }
       );
       dispatch({
-        type: 'SET_STATUS',
-        payload: 'IDLE'
+        type: 'SET_SYNCED',
+        payload: true
       });
       dispatch({
         type: 'SET_COMMENTS',
         payload: appComments
       });
     })();
-  }, [state.comments, state.status]);
+  }, [state.comments, state.isSynced]);
 
   const deleteEnabled = state.comments.some(comment => comment.isSelected);
 

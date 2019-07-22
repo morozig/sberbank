@@ -6,5 +6,5 @@ export default interface AppState {
     comments: AppComment[];
     selectedUserId: number;
     search: string;
-    status: string;
+    isSynced: boolean;
 }

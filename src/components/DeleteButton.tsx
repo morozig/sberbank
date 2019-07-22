@@ -12,8 +12,8 @@ const DeleteButton: React.FC<DeleteButtonProps> =
     const onClick = () => {
         if (props.isEnabled) {
             dispatch({
-                type: 'SET_STATUS',
-                payload: 'SYNC'
+                type: 'SET_SYNCED',
+                payload: false
             });        
         }
     };

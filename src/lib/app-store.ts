@@ -35,9 +35,9 @@ export const reducer = (state: AppState, action: AppAction) => {
             }
             return newState as AppState;
         }
-        case 'SET_STATUS': {
+        case 'SET_SYNCED': {
             const newState = {...state};
-            newState.status = action.payload as string;
+            newState.isSynced = action.payload as boolean;
             return newState as AppState;
         }
         default:
