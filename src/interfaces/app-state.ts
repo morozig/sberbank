@@ -7,4 +7,5 @@ export default interface AppState {
     selectedUserId: number;
     search: string;
     isSynced: boolean;
+    isError: boolean;
 }

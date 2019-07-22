@@ -40,6 +40,11 @@ export const reducer = (state: AppState, action: AppAction) => {
             newState.isSynced = action.payload as boolean;
             return newState as AppState;
         }
+        case 'SET_ERROR': {
+            const newState = {...state};
+            newState.isError = action.payload as boolean;
+            return newState as AppState;
+        }
         default:
             throw new Error('unknown action!');
     }
