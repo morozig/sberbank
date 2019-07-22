@@ -33,7 +33,7 @@ const Comments: React.FC<CommentsProps> =
                     <hr/>
                 </React.Fragment>
             ))}
-            {comments.length > 1 && 
+            {comments.length >= 1 && 
                 <Comment 
                     comment={comments[comments.length - 1]}
                     search={props.search}
